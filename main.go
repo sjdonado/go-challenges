@@ -3,6 +3,7 @@ package main
 import (
 	"example/go_challenges/data_types"
 	"example/go_challenges/first_steps"
+	"example/go_challenges/goroutines_fibonacci"
 	"example/go_challenges/http_server"
 	"example/go_challenges/store"
 	"fmt"
@@ -12,7 +13,9 @@ func main() {
 	// testFirstSteps()
 	// testDataTypes()
 	//testHttpServer()
-	testOnlineStore()
+	// testOnlineStore()
+	goroutines_fibonacci.Test(15)
+	goroutines_fibonacci.InfiniteLoop()
 }
 
 func testFirstSteps() {
