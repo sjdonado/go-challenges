@@ -1,6 +1,7 @@
 package main
 
 import (
+	"example/go_challenges/bank/bankapi"
 	"example/go_challenges/data_types"
 	"example/go_challenges/first_steps"
 	"example/go_challenges/goroutines_fibonacci"
@@ -14,8 +15,8 @@ func main() {
 	// testDataTypes()
 	//testHttpServer()
 	// testOnlineStore()
-	goroutines_fibonacci.Test(15)
-	goroutines_fibonacci.InfiniteLoop()
+	// testGoroutinesFib()
+	bankapi.Run()
 }
 
 func testFirstSteps() {
@@ -64,4 +65,9 @@ func testOnlineStore() {
 	teo.ChangeName("Amaranto")
 
 	fmt.Println(teo)
+}
+
+func testGoroutinesFib() {
+	goroutines_fibonacci.Test(15)
+	goroutines_fibonacci.InfiniteLoop()
 }
