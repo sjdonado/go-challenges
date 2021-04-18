@@ -1,15 +1,9 @@
-package main
+package first_steps
 
 import (
 	"fmt"
 	"strconv"
 )
-
-func main() {
-	fizzBuzzUsingSwitch()
-	println("Square root is: ", fmt.Sprintf("%f", guestSquareRoot(25, 1, 0)))
-	paincNegative()
-}
 
 func fizzBuzz(number int) string {
 	switch {
@@ -23,24 +17,24 @@ func fizzBuzz(number int) string {
 	return strconv.Itoa(number)
 }
 
-func fizzBuzzUsingSwitch() {
+func FizzBuzzUsingSwitch() {
 	for i := 1; i <= 100; i++ {
 		println(fizzBuzz(i))
 	}
 }
 
-func guestSquareRoot(x float64, currguess float64, n int) float64 {
+func GuestSquareRoot(x float64, currguess float64, n int) float64 {
 	if n < 10 {
 		nextguess := currguess - (currguess*currguess-x)/(2*currguess)
 		if nextguess != currguess {
 			println("A guess for square root is ", fmt.Sprintf("%f", nextguess))
-			return guestSquareRoot(x, nextguess, n+1)
+			return GuestSquareRoot(x, nextguess, n+1)
 		}
 	}
 	return currguess
 }
 
-func paincNegative() {
+func PaincNegative() {
 	var val int
 	for {
 		fmt.Print("Enter number: ")

@@ -1,29 +1,13 @@
-package main
+package data_types
 
 import (
 	"errors"
 	"fmt"
 )
 
-func main() {
-	var sequence int
-	fmt.Print("Enter a number: ")
-	fmt.Scanln(&sequence)
-	if res, err := fibonacci(sequence); err == nil {
-		fmt.Println(res)
-	}
-
-	var romanNumber string
-	fmt.Print("Enter a roman number: ")
-	fmt.Scanln(&romanNumber)
-	if res, err := romanNumeralsTranslator(romanNumber); err == nil {
-		fmt.Println(res)
-	}
-}
-
-func fibonacci(sequence int) ([]int, error) {
+func Fibonacci(sequence int) ([]int, error) {
 	if sequence <= 2 {
-		return nil, errors.New("Sequence must be greater than 2")
+		return nil, errors.New("SEQUENCE MUST BE GREATER THAN 2")
 	}
 
 	serie := make([]int, sequence)
@@ -36,7 +20,7 @@ func fibonacci(sequence int) ([]int, error) {
 	return serie, nil
 }
 
-func romanNumeralsTranslator(romanNumber string) (int, error) {
+func RomanNumeralsTranslator(romanNumber string) (int, error) {
 	dict := map[rune]int{
 		'M': 1000,
 		'D': 500,
